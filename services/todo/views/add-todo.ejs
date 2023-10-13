@@ -2,8 +2,18 @@
 
 
     <main>
-        <div class="flex justify-evenly py-20">
-            Add TODO form
+        <div class="h-screen w-screen flex justify-center items-center">
+            <div class="bg-white shadow-lg h-1/2 w-1/2 p-4">
+                <h3 class="text-lg">Todo Form</h3>
+                <form class="mt-10 flex flex-col" action="save-todo" method="post">
+                    <h4>Name</h4>
+                    <input 
+                        name="name"
+                        class="my-2 px-4 py-2 text-base rounded-lg border border-slate-600 outline-none focus:outline-none"
+                    />
+                    <input type="submit" value="Submit" class="my-2 px-2 py-2 rounded-md bg-orange-700 text-white" />
+                </form>
+            </div>
         </div>
     </main>
 
