@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello
+    <div id="sse-data"></div>
+    <script>
+      const sseData = document.getElementById('sse-data');
+      const eventSource = new EventSource('/sse');
+  
+      eventSource.addEventListener('message', (event) => {
+        sseData.innerHTML = `Received: ${event.data}<br>` + sseData.innerHTML;
+      });
+  
+      eventSource.addEventListener('error', (event) => {
+        console.error('SSE Error:', event);
+      });
+    </script>
+</body>
+</html>
